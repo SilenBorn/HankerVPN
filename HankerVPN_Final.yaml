@@ -1,0 +1,3652 @@
+---
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "*.chinaforumpace.com"
+  - chinaforumpace.com
+  - "*.cndialogueasia.org"
+  - cndialogueasia.org
+  - "*.chinatradenew.com"
+  - chinatradenew.com
+  - "*.lan"
+  - "*.local"
+  - localhost
+  - time.*.com
+  - ntp.*.com
+  - "*.ntp.org.cn"
+  use-hosts: true
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  fallback:
+  - https://doh.dns.sb/dns-query
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.twnic.tw/dns-query
+  - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+  proxy-server-nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  nameserver-policy:
+    "*.chinaforumpace.com":
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    "*.cndialogueasia.org":
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    "*.chinatradenew.com":
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+proxies:
+- name: Hanker-日本-01
+  type: anytls
+  server: '0823jpjp2.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-02
+  type: anytls
+  server: '0823jpjp2.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-03
+  type: anytls
+  server: '0823jpjp2.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-其他-01
+  type: anytls
+  server: '0823jpjp2.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-04
+  type: anytls
+  server: '0823jpjp2.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-01
+  type: anytls
+  server: '0812sg.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-05
+  type: anytls
+  server: '0812jpjp3.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-06
+  type: anytls
+  server: '0812jpjp9.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-韩国-01
+  type: anytls
+  server: '0812kr.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-01
+  type: anytls
+  server: '0822tw.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-香港-01
+  type: anytls
+  server: '0823hk.debian13.com'
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-02
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30131
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-03
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30132
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-04
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30133
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-05
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30134
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-06
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30135
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-07
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30136
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-08
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30137
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-09
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30138
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-新加坡-10
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30139
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-07
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30140
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-08
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30141
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-09
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30142
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-10
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30143
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-11
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30144
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30145
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-02
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30146
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-03
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30147
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-04
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30148
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-05
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30149
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-06
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30150
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-07
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30151
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-02
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30152
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-03
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30153
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-04
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30154
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-05
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30155
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-06
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30156
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-香港-02
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30157
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-香港-03
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30158
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-香港-04
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30159
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-香港-05
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30160
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-香港-06
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30161
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-12
+  type: anytls
+  server: 111.68.15.43
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-13
+  type: anytls
+  server: 111.68.15.147
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-14
+  type: anytls
+  server: 175.41.22.140
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-15
+  type: anytls
+  server: 175.41.22.163
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-16
+  type: anytls
+  server: 111.68.15.228
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-17
+  type: anytls
+  server: 111.68.15.236
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-18
+  type: anytls
+  server: 111.68.15.51
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-19
+  type: anytls
+  server: 175.41.22.155
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-20
+  type: anytls
+  server: 175.41.22.171
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-21
+  type: anytls
+  server: 147.79.20.63
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-22
+  type: anytls
+  server: 147.79.20.186
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: ports.debian13.com
+- name: Hanker-日本-23
+  type: anytls
+  server: 147.79.20.16
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: firmware.debian13.com
+- name: Hanker-日本-24
+  type: anytls
+  server: 147.79.20.150
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-08
+  type: anytls
+  server: 182.16.58.227
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-09
+  type: anytls
+  server: 182.16.61.67
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-10
+  type: anytls
+  server: 154.19.241.4
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: sources.debian13.com
+- name: Hanker-美国-11
+  type: anytls
+  server: 155.117.18.226
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: keyring.debian13.com
+- name: Hanker-美国-12
+  type: anytls
+  server: 166.0.19.97
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: changelogs.debian13.com
+- name: Hanker-美国-13
+  type: anytls
+  server: 23.172.40.93
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-14
+  type: anytls
+  server: 154.19.241.39
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-台湾-07
+  type: anytls
+  server: 151.242.189.188
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: dkms.debian13.com
+- name: Hanker-台湾-08
+  type: anytls
+  server: 151.242.188.138
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: initramfs.debian13.com
+- name: Hanker-台湾-09
+  type: anytls
+  server: 151.242.189.178
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: grub.debian13.com
+- name: Hanker-台湾-10
+  type: anytls
+  server: 151.242.188.237
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: headers.debian13.com
+- name: Hanker-香港-07
+  type: anytls
+  server: 103.219.195.6
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: proposed.debian13.com
+- name: Hanker-香港-08
+  type: anytls
+  server: 209.33.160.25
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: cloud.debian13.com
+- name: Hanker-香港-09
+  type: anytls
+  server: 103.219.193.173
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: httpredir.debian13.com
+- name: Hanker-香港-10
+  type: anytls
+  server: 103.219.195.21
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: volatile.debian13.com
+- name: Hanker-香港-11
+  type: anytls
+  server: 209.33.167.243
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: mirrors.debian13.com
+- name: Hanker-韩国-02
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30162
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-韩国-03
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30163
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-韩国-04
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30164
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-韩国-05
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30165
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-中国澳门-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30166
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-马来西亚-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30167
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-马来西亚-02
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30168
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-泰国-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30169
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-泰国-02
+  type: anytls
+  server: 38.244.151.239
+  port: 443
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: uscan.debian13.com
+- name: Hanker-缅甸-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30170
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-印尼-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30171
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-柬埔寨-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30172
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-菲律宾-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30173
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-越南-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30174
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-印度-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30175
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-尼泊尔-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30176
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-孟加拉国-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30177
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-巴基斯坦-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30178
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-澳大利亚-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30179
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-加拿大-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30180
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-迪拜-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30181
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-沙特阿拉伯-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30182
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-以色列-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30183
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-伊拉克-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30184
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-巴林-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30185
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-阿曼-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30186
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-卡塔尔-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30187
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-俄罗斯-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30188
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-法国-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30189
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-英国-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30190
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-德国-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30191
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-西班牙-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30192
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-意大利-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30193
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-荷兰-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30194
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-挪威-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30195
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-瑞士-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30196
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-波兰-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30197
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-芬兰-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30198
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-乌克兰-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30199
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-哈萨克斯坦-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30200
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-罗马尼亚-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30201
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-塞尔维亚-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30202
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-瑞典-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30203
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-比利时-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30204
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-捷克共和国-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30205
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-丹麦-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30206
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-爱沙尼亚-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30207
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-匈牙利-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30208
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-冰岛-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30209
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-土耳其-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30210
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-保加利亚-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30211
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-希腊-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30212
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-奥地利-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30213
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-南非-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30214
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-埃及-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30215
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-巴西-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30216
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-墨西哥-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30217
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-阿根廷-01
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30218
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-智利-01
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30219
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-秘鲁-01
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30220
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-哥伦比亚-01
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30221
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-厄瓜多尔-01
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30222
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-15
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30223
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-16
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30224
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-17
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30225
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-18
+  type: anytls
+  server: '0819sgsg3.qianwen7.com'
+  port: 30226
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-19
+  type: anytls
+  server: '0822jpjp6.qianwen7.com'
+  port: 30227
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-20
+  type: anytls
+  server: '0823hkzz.qianwen7.com'
+  port: 30228
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-21
+  type: anytls
+  server: '0820jpjp.qianwen7.com'
+  port: 30229
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-美国-22
+  type: anytls
+  server: '0819sgsg2.qianwen7.com'
+  port: 30230
+  password: 07d91b4c-b660-4645-bc3e-119d8526314a
+  udp: true
+  sni: down.debian7.com
+- name: Hanker-日本-25
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: plucky.debian6.com
+  ws-opts:
+    path: "/e15e74a0"
+    headers:
+      Host: plucky.debian6.com
+- name: Hanker-日本-26
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: oldreleases.debian6.com
+  ws-opts:
+    path: "/d112ce11"
+    headers:
+      Host: oldreleases.debian6.com
+- name: Hanker-日本-27
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: cloudimages.debian6.com
+  ws-opts:
+    path: "/b8dae2b5"
+    headers:
+      Host: cloudimages.debian6.com
+- name: Hanker-日本-28
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: mantic.debian6.com
+  ws-opts:
+    path: "/e6ec404e"
+    headers:
+      Host: mantic.debian6.com
+- name: Hanker-日本-29
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: people.debian6.com
+  ws-opts:
+    path: "/3d1811af"
+    headers:
+      Host: people.debian6.com
+- name: Hanker-美国-23
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: lunar.debian6.com
+  ws-opts:
+    path: "/2bad5c16"
+    headers:
+      Host: lunar.debian6.com
+- name: Hanker-美国-24
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: kinetic.debian6.com
+  ws-opts:
+    path: "/88dbfd71"
+    headers:
+      Host: kinetic.debian6.com
+- name: Hanker-美国-25
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: wiki.debian6.com
+  ws-opts:
+    path: "/cc561b58"
+    headers:
+      Host: wiki.debian6.com
+- name: Hanker-台湾-11
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: noble.debian6.com
+  ws-opts:
+    path: "/04605aae"
+    headers:
+      Host: noble.debian6.com
+- name: Hanker-台湾-12
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: daisy.debian6.com
+  ws-opts:
+    path: "/efebf1c8"
+    headers:
+      Host: daisy.debian6.com
+- name: Hanker-台湾-13
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: keyserver.debian6.com
+  ws-opts:
+    path: "/f8627a09"
+    headers:
+      Host: keyserver.debian6.com
+- name: Hanker-台湾-14
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: oracular.debian6.com
+  ws-opts:
+    path: "/1768eac1"
+    headers:
+      Host: oracular.debian6.com
+- name: Hanker-台湾-15
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: extras.debian6.com
+  ws-opts:
+    path: "/fb95609c"
+    headers:
+      Host: extras.debian6.com
+- name: Hanker-香港-12
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: jammy.debian6.com
+  ws-opts:
+    path: "/b6d3d7dd"
+    headers:
+      Host: jammy.debian6.com
+- name: Hanker-香港-13
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: help.debian6.com
+  ws-opts:
+    path: "/03d13cc5"
+    headers:
+      Host: help.debian6.com
+- name: Hanker-香港-14
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: discourse.debian6.com
+  ws-opts:
+    path: "/3449a35a"
+    headers:
+      Host: discourse.debian6.com
+- name: Hanker-香港-15
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: impish.debian6.com
+  ws-opts:
+    path: "/20f90b68"
+    headers:
+      Host: impish.debian6.com
+- name: Hanker-香港-16
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: launchpad.debian6.com
+  ws-opts:
+    path: "/594ab1b0"
+    headers:
+      Host: launchpad.debian6.com
+- name: Hanker-韩国-06
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: hirsute.debian6.com
+  ws-opts:
+    path: "/a03ff512"
+    headers:
+      Host: hirsute.debian6.com
+- name: Hanker-韩国-07
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: snapcraft.debian6.com
+  ws-opts:
+    path: "/07a1054c"
+    headers:
+      Host: snapcraft.debian6.com
+- name: Hanker-韩国-08
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: groovy.debian6.com
+  ws-opts:
+    path: "/6d4f9336"
+    headers:
+      Host: groovy.debian6.com
+- name: Hanker-韩国-09
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: ppa.debian6.com
+  ws-opts:
+    path: "/533d513d"
+    headers:
+      Host: ppa.debian6.com
+- name: Hanker-新加坡-11
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: focal.debian6.com
+  ws-opts:
+    path: "/a32c36c1"
+    headers:
+      Host: focal.debian6.com
+- name: Hanker-新加坡-12
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: login.debian6.com
+  ws-opts:
+    path: "/4b6214cc"
+    headers:
+      Host: login.debian6.com
+- name: Hanker-新加坡-13
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: wily.debian6.com
+  ws-opts:
+    path: "/ddea64e6"
+    headers:
+      Host: wily.debian6.com
+- name: Hanker-新加坡-14
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: proposed.debian6.com
+  ws-opts:
+    path: "/865da059"
+    headers:
+      Host: proposed.debian6.com
+- name: Hanker-新加坡-15
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: vivid.debian6.com
+  ws-opts:
+    path: "/db90bfea"
+    headers:
+      Host: vivid.debian6.com
+- name: Hanker-新加坡-16
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: backports.debian6.com
+  ws-opts:
+    path: "/eb55a71c"
+    headers:
+      Host: backports.debian6.com
+- name: Hanker-新加坡-17
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: utopic.debian6.com
+  ws-opts:
+    path: "/8f6b865a"
+    headers:
+      Host: utopic.debian6.com
+- name: Hanker-新加坡-18
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: updates.debian6.com
+  ws-opts:
+    path: "/2c8a28cf"
+    headers:
+      Host: updates.debian6.com
+- name: Hanker-新加坡-19
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: trusty.debian6.com
+  ws-opts:
+    path: "/e0d360d7"
+    headers:
+      Host: trusty.debian6.com
+- name: Hanker-新加坡-20
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: dists.debian6.com
+  ws-opts:
+    path: "/6353fecb"
+    headers:
+      Host: dists.debian6.com
+- name: Hanker-中国澳门-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: natty.debian6.com
+  ws-opts:
+    path: "/4a269d8a"
+    headers:
+      Host: natty.debian6.com
+- name: Hanker-马来西亚-03
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: dpkg.debian6.com
+  ws-opts:
+    path: "/7c4780c1"
+    headers:
+      Host: dpkg.debian6.com
+- name: Hanker-马来西亚-04
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: main.debian6.com
+  ws-opts:
+    path: "/8b2841e6"
+    headers:
+      Host: main.debian6.com
+- name: Hanker-泰国-03
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: maverick.debian6.com
+  ws-opts:
+    path: "/9fc24113"
+    headers:
+      Host: maverick.debian6.com
+- name: Hanker-缅甸-02
+  type: vless
+  server: '0817jpzz.debian13.com'
+  port: 23115
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: tcp
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  servername: www.cctv.com
+  reality-opts:
+    public-key: LCHdNaxAB9OPmyBdmaYeeyBL79Ur9agnFPluBhHIWQM
+    short-id: 3d8c2a
+- name: Hanker-印尼-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: snapd.debian6.com
+  ws-opts:
+    path: "/91263c22"
+    headers:
+      Host: snapd.debian6.com
+- name: Hanker-柬埔寨-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: universe.debian6.com
+  ws-opts:
+    path: "/1ff4982b"
+    headers:
+      Host: universe.debian6.com
+- name: Hanker-菲律宾-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: yakkety.debian6.com
+  ws-opts:
+    path: "/020280cf"
+    headers:
+      Host: yakkety.debian6.com
+- name: Hanker-越南-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: multipass.debian6.com
+  ws-opts:
+    path: "/40f74cab"
+    headers:
+      Host: multipass.debian6.com
+- name: Hanker-印度-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: releases.debian6.com
+  ws-opts:
+    path: "/d36049e3"
+    headers:
+      Host: releases.debian6.com
+- name: Hanker-尼泊尔-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: cosmic.debian6.com
+  ws-opts:
+    path: "/54aa01ec"
+    headers:
+      Host: cosmic.debian6.com
+- name: Hanker-孟加拉国-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: bionic.debian6.com
+  ws-opts:
+    path: "/b2aa8091"
+    headers:
+      Host: bionic.debian6.com
+- name: Hanker-巴基斯坦-02
+  type: vless
+  server: '0817jpzz.debian13.com'
+  port: 23134
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: tcp
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  servername: www.cctv.com
+  reality-opts:
+    public-key: 9K8p0__djubh5J0J0LlA5NRC5fLzz2Sd_nXezpllGQ8
+    short-id: abcd42
+- name: Hanker-澳大利亚-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: lucid.debian6.com
+  ws-opts:
+    path: "/4125dbe3"
+    headers:
+      Host: lucid.debian6.com
+- name: Hanker-加拿大-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: netplan.debian6.com
+  ws-opts:
+    path: "/4479e637"
+    headers:
+      Host: netplan.debian6.com
+- name: Hanker-迪拜-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: intrepid.debian6.com
+  ws-opts:
+    path: "/641e4bfe"
+    headers:
+      Host: intrepid.debian6.com
+- name: Hanker-沙特阿拉伯-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: changelogs.debian6.com
+  ws-opts:
+    path: "/a1538136"
+    headers:
+      Host: changelogs.debian6.com
+- name: Hanker-以色列-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: kubuntu.debian6.com
+  ws-opts:
+    path: "/0c13b76f"
+    headers:
+      Host: kubuntu.debian6.com
+- name: Hanker-伊拉克-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: translations.debian6.com
+  ws-opts:
+    path: "/ceeac2a0"
+    headers:
+      Host: translations.debian6.com
+- name: Hanker-巴林-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: answers.debian6.com
+  ws-opts:
+    path: "/068beefb"
+    headers:
+      Host: answers.debian6.com
+- name: Hanker-阿曼-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: artful.debian6.com
+  ws-opts:
+    path: "/bd304ebf"
+    headers:
+      Host: artful.debian6.com
+- name: Hanker-卡塔尔-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: zesty.debian6.com
+  ws-opts:
+    path: "/510f5c6e"
+    headers:
+      Host: zesty.debian6.com
+- name: Hanker-俄罗斯-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: disco.debian6.com
+  ws-opts:
+    path: "/aac6787a"
+    headers:
+      Host: disco.debian6.com
+- name: Hanker-法国-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: karmic.debian6.com
+  ws-opts:
+    path: "/48b785fd"
+    headers:
+      Host: karmic.debian6.com
+- name: Hanker-英国-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: subiquity.debian6.com
+  ws-opts:
+    path: "/3d6a5589"
+    headers:
+      Host: subiquity.debian6.com
+- name: Hanker-德国-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: jaunty.debian6.com
+  ws-opts:
+    path: "/33dd3e76"
+    headers:
+      Host: jaunty.debian6.com
+- name: Hanker-西班牙-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: hardy.debian6.com
+  ws-opts:
+    path: "/18ffbe03"
+    headers:
+      Host: hardy.debian6.com
+- name: Hanker-意大利-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: plymouth.debian6.com
+  ws-opts:
+    path: "/cfb32c1b"
+    headers:
+      Host: plymouth.debian6.com
+- name: Hanker-荷兰-02
+  type: vless
+  server: '0817jpzz.debian13.com'
+  port: 23037
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: tcp
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  servername: www.cctv.com
+  reality-opts:
+    public-key: Dj0lvosNqSfSgB6iFrBYiaD3bg6_uqfmzKYji8GTB3k
+    short-id: abcd45
+- name: Hanker-挪威-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: initramfs.debian6.com
+  ws-opts:
+    path: "/64b58b43"
+    headers:
+      Host: initramfs.debian6.com
+- name: Hanker-瑞士-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: feisty.debian6.com
+  ws-opts:
+    path: "/02c114ed"
+    headers:
+      Host: feisty.debian6.com
+- name: Hanker-波兰-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: grub.debian6.com
+  ws-opts:
+    path: "/c0b1528c"
+    headers:
+      Host: grub.debian6.com
+- name: Hanker-芬兰-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: edgy.debian6.com
+  ws-opts:
+    path: "/e267c06b"
+    headers:
+      Host: edgy.debian6.com
+- name: Hanker-乌克兰-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: hwe.debian6.com
+  ws-opts:
+    path: "/add8165b"
+    headers:
+      Host: hwe.debian6.com
+- name: Hanker-哈萨克斯坦-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: dapper.debian6.com
+  ws-opts:
+    path: "/69539cc5"
+    headers:
+      Host: dapper.debian6.com
+- name: Hanker-罗马尼亚-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: livepatch.debian6.com
+  ws-opts:
+    path: "/349b0f10"
+    headers:
+      Host: livepatch.debian6.com
+- name: Hanker-塞尔维亚-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: breezy.debian6.com
+  ws-opts:
+    path: "/3c355abd"
+    headers:
+      Host: breezy.debian6.com
+- name: Hanker-瑞典-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: landscape.debian6.com
+  ws-opts:
+    path: "/a2490173"
+    headers:
+      Host: landscape.debian6.com
+- name: Hanker-比利时-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: hoary.debian6.com
+  ws-opts:
+    path: "/b1df9b81"
+    headers:
+      Host: hoary.debian6.com
+- name: Hanker-捷克共和国-02
+  type: vless
+  server: '0817jpzz.debian13.com'
+  port: 23141
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: tcp
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  servername: www.cctv.com
+  reality-opts:
+    public-key: rdLAJyLOkLtkRiQEW4w-s8fu647RGooPb9fTaYjsQ2I
+    short-id: abcd56
+- name: Hanker-丹麦-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: warty.debian6.com
+  ws-opts:
+    path: "/a0371012"
+    headers:
+      Host: warty.debian6.com
+- name: Hanker-爱沙尼亚-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: juju.debian6.com
+  ws-opts:
+    path: "/37d2b7f2"
+    headers:
+      Host: juju.debian6.com
+- name: Hanker-匈牙利-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: security.debian6.com
+  ws-opts:
+    path: "/61efc1c1"
+    headers:
+      Host: security.debian6.com
+- name: Hanker-冰岛-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: lxd.debian6.com
+  ws-opts:
+    path: "/3ece74ad"
+    headers:
+      Host: lxd.debian6.com
+- name: Hanker-土耳其-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: esm.debian6.com
+  ws-opts:
+    path: "/ac466491"
+    headers:
+      Host: esm.debian6.com
+- name: Hanker-保加利亚-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: eoan.debian6.com
+  ws-opts:
+    path: "/d04dd2fe"
+    headers:
+      Host: eoan.debian6.com
+- name: Hanker-希腊-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: bugs.debian6.com
+  ws-opts:
+    path: "/c0bb445e"
+    headers:
+      Host: bugs.debian6.com
+- name: Hanker-奥地利-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: oneiric.debian6.com
+  ws-opts:
+    path: "/87884b48"
+    headers:
+      Host: oneiric.debian6.com
+- name: Hanker-南非-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: xubuntu.debian6.com
+  ws-opts:
+    path: "/d7cbf7fb"
+    headers:
+      Host: xubuntu.debian6.com
+- name: Hanker-埃及-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: lubuntu.debian6.com
+  ws-opts:
+    path: "/b2a13403"
+    headers:
+      Host: lubuntu.debian6.com
+- name: Hanker-巴西-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: ubiquity.debian6.com
+  ws-opts:
+    path: "/4d428a09"
+    headers:
+      Host: ubiquity.debian6.com
+- name: Hanker-墨西哥-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: ports.debian6.com
+  ws-opts:
+    path: "/ca958020"
+    headers:
+      Host: ports.debian6.com
+- name: Hanker-阿根廷-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: microk8s.debian6.com
+  ws-opts:
+    path: "/45731fdd"
+    headers:
+      Host: microk8s.debian6.com
+- name: Hanker-智利-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: cdimage.debian6.com
+  ws-opts:
+    path: "/30eb8c87"
+    headers:
+      Host: cdimage.debian6.com
+- name: Hanker-秘鲁-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: multiverse.debian6.com
+  ws-opts:
+    path: "/e73c6374"
+    headers:
+      Host: multiverse.debian6.com
+- name: Hanker-哥伦比亚-02
+  type: vless
+  server: '0817jpzz.debian13.com'
+  port: 23020
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: tcp
+  udp: true
+  flow: xtls-rprx-vision
+  tls: true
+  client-fingerprint: chrome
+  servername: www.cctv.com
+  reality-opts:
+    public-key: 51E3ctAZaKBeZPs-I8dhhkpzSC0u86pAr07x_2YzGGk
+    short-id: 73e5eb
+- name: Hanker-厄瓜多尔-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: restricted.debian6.com
+  ws-opts:
+    path: "/ba60e600"
+    headers:
+      Host: restricted.debian6.com
+- name: Hanker-美国-26
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: motd.debian6.com
+  ws-opts:
+    path: "/044fe2ad"
+    headers:
+      Host: motd.debian6.com
+- name: Hanker-美国-27
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: apt.debian6.com
+  ws-opts:
+    path: "/a7193387"
+    headers:
+      Host: apt.debian6.com
+- name: Hanker-美国-28
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: saucy.debian6.com
+  ws-opts:
+    path: "/4c2b8986"
+    headers:
+      Host: saucy.debian6.com
+- name: Hanker-美国-29
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: raring.debian6.com
+  ws-opts:
+    path: "/74ccb497"
+    headers:
+      Host: raring.debian6.com
+- name: Hanker-美国-30
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: quantal.debian6.com
+  ws-opts:
+    path: "/a3841b4d"
+    headers:
+      Host: quantal.debian6.com
+- name: Hanker-美国-31
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: pool.debian6.com
+  ws-opts:
+    path: "/9fbc191d"
+    headers:
+      Host: pool.debian6.com
+- name: Hanker-美国-32
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: indices.debian6.com
+  ws-opts:
+    path: "/05f65b77"
+    headers:
+      Host: indices.debian6.com
+- name: Hanker-美国-33
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: precise.debian6.com
+  ws-opts:
+    path: "/ec5fd3aa"
+    headers:
+      Host: precise.debian6.com
+- name: Hanker-其他-02
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: precise.debian6.com
+  ws-opts:
+    path: "/ec5fd3aa"
+    headers:
+      Host: precise.debian6.com
+- name: Hanker-其他-03
+  type: vless
+  server: archive.debian6.com
+  port: 443
+  uuid: 07d91b4c-b660-4645-bc3e-119d8526314a
+  network: ws
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  servername: precise.debian6.com
+  ws-opts:
+    path: "/ec5fd3aa"
+    headers:
+      Host: precise.debian6.com
+proxy-groups:
+- name: Hanker VPN
+  type: select
+  proxies:
+  - 自动选择
+  - 故障转移
+  - Hanker-日本-01
+  - Hanker-日本-02
+  - Hanker-日本-03
+  - Hanker-其他-01
+  - Hanker-日本-04
+  - Hanker-新加坡-01
+  - Hanker-日本-05
+  - Hanker-日本-06
+  - Hanker-韩国-01
+  - Hanker-台湾-01
+  - Hanker-香港-01
+  - Hanker-新加坡-02
+  - Hanker-新加坡-03
+  - Hanker-新加坡-04
+  - Hanker-新加坡-05
+  - Hanker-新加坡-06
+  - Hanker-新加坡-07
+  - Hanker-新加坡-08
+  - Hanker-新加坡-09
+  - Hanker-新加坡-10
+  - Hanker-日本-07
+  - Hanker-日本-08
+  - Hanker-日本-09
+  - Hanker-日本-10
+  - Hanker-日本-11
+  - Hanker-美国-01
+  - Hanker-美国-02
+  - Hanker-美国-03
+  - Hanker-美国-04
+  - Hanker-美国-05
+  - Hanker-美国-06
+  - Hanker-美国-07
+  - Hanker-台湾-02
+  - Hanker-台湾-03
+  - Hanker-台湾-04
+  - Hanker-台湾-05
+  - Hanker-台湾-06
+  - Hanker-香港-02
+  - Hanker-香港-03
+  - Hanker-香港-04
+  - Hanker-香港-05
+  - Hanker-香港-06
+  - Hanker-日本-12
+  - Hanker-日本-13
+  - Hanker-日本-14
+  - Hanker-日本-15
+  - Hanker-日本-16
+  - Hanker-日本-17
+  - Hanker-日本-18
+  - Hanker-日本-19
+  - Hanker-日本-20
+  - Hanker-日本-21
+  - Hanker-日本-22
+  - Hanker-日本-23
+  - Hanker-日本-24
+  - Hanker-美国-08
+  - Hanker-美国-09
+  - Hanker-美国-10
+  - Hanker-美国-11
+  - Hanker-美国-12
+  - Hanker-美国-13
+  - Hanker-美国-14
+  - Hanker-台湾-07
+  - Hanker-台湾-08
+  - Hanker-台湾-09
+  - Hanker-台湾-10
+  - Hanker-香港-07
+  - Hanker-香港-08
+  - Hanker-香港-09
+  - Hanker-香港-10
+  - Hanker-香港-11
+  - Hanker-韩国-02
+  - Hanker-韩国-03
+  - Hanker-韩国-04
+  - Hanker-韩国-05
+  - Hanker-中国澳门-01
+  - Hanker-马来西亚-01
+  - Hanker-马来西亚-02
+  - Hanker-泰国-01
+  - Hanker-泰国-02
+  - Hanker-缅甸-01
+  - Hanker-印尼-01
+  - Hanker-柬埔寨-01
+  - Hanker-菲律宾-01
+  - Hanker-越南-01
+  - Hanker-印度-01
+  - Hanker-尼泊尔-01
+  - Hanker-孟加拉国-01
+  - Hanker-巴基斯坦-01
+  - Hanker-澳大利亚-01
+  - Hanker-加拿大-01
+  - Hanker-迪拜-01
+  - Hanker-沙特阿拉伯-01
+  - Hanker-以色列-01
+  - Hanker-伊拉克-01
+  - Hanker-巴林-01
+  - Hanker-阿曼-01
+  - Hanker-卡塔尔-01
+  - Hanker-俄罗斯-01
+  - Hanker-法国-01
+  - Hanker-英国-01
+  - Hanker-德国-01
+  - Hanker-西班牙-01
+  - Hanker-意大利-01
+  - Hanker-荷兰-01
+  - Hanker-挪威-01
+  - Hanker-瑞士-01
+  - Hanker-波兰-01
+  - Hanker-芬兰-01
+  - Hanker-乌克兰-01
+  - Hanker-哈萨克斯坦-01
+  - Hanker-罗马尼亚-01
+  - Hanker-塞尔维亚-01
+  - Hanker-瑞典-01
+  - Hanker-比利时-01
+  - Hanker-捷克共和国-01
+  - Hanker-丹麦-01
+  - Hanker-爱沙尼亚-01
+  - Hanker-匈牙利-01
+  - Hanker-冰岛-01
+  - Hanker-土耳其-01
+  - Hanker-保加利亚-01
+  - Hanker-希腊-01
+  - Hanker-奥地利-01
+  - Hanker-南非-01
+  - Hanker-埃及-01
+  - Hanker-巴西-01
+  - Hanker-墨西哥-01
+  - Hanker-阿根廷-01
+  - Hanker-智利-01
+  - Hanker-秘鲁-01
+  - Hanker-哥伦比亚-01
+  - Hanker-厄瓜多尔-01
+  - Hanker-美国-15
+  - Hanker-美国-16
+  - Hanker-美国-17
+  - Hanker-美国-18
+  - Hanker-美国-19
+  - Hanker-美国-20
+  - Hanker-美国-21
+  - Hanker-美国-22
+  - Hanker-日本-25
+  - Hanker-日本-26
+  - Hanker-日本-27
+  - Hanker-日本-28
+  - Hanker-日本-29
+  - Hanker-美国-23
+  - Hanker-美国-24
+  - Hanker-美国-25
+  - Hanker-台湾-11
+  - Hanker-台湾-12
+  - Hanker-台湾-13
+  - Hanker-台湾-14
+  - Hanker-台湾-15
+  - Hanker-香港-12
+  - Hanker-香港-13
+  - Hanker-香港-14
+  - Hanker-香港-15
+  - Hanker-香港-16
+  - Hanker-韩国-06
+  - Hanker-韩国-07
+  - Hanker-韩国-08
+  - Hanker-韩国-09
+  - Hanker-新加坡-11
+  - Hanker-新加坡-12
+  - Hanker-新加坡-13
+  - Hanker-新加坡-14
+  - Hanker-新加坡-15
+  - Hanker-新加坡-16
+  - Hanker-新加坡-17
+  - Hanker-新加坡-18
+  - Hanker-新加坡-19
+  - Hanker-新加坡-20
+  - Hanker-中国澳门-02
+  - Hanker-马来西亚-03
+  - Hanker-马来西亚-04
+  - Hanker-泰国-03
+  - Hanker-缅甸-02
+  - Hanker-印尼-02
+  - Hanker-柬埔寨-02
+  - Hanker-菲律宾-02
+  - Hanker-越南-02
+  - Hanker-印度-02
+  - Hanker-尼泊尔-02
+  - Hanker-孟加拉国-02
+  - Hanker-巴基斯坦-02
+  - Hanker-澳大利亚-02
+  - Hanker-加拿大-02
+  - Hanker-迪拜-02
+  - Hanker-沙特阿拉伯-02
+  - Hanker-以色列-02
+  - Hanker-伊拉克-02
+  - Hanker-巴林-02
+  - Hanker-阿曼-02
+  - Hanker-卡塔尔-02
+  - Hanker-俄罗斯-02
+  - Hanker-法国-02
+  - Hanker-英国-02
+  - Hanker-德国-02
+  - Hanker-西班牙-02
+  - Hanker-意大利-02
+  - Hanker-荷兰-02
+  - Hanker-挪威-02
+  - Hanker-瑞士-02
+  - Hanker-波兰-02
+  - Hanker-芬兰-02
+  - Hanker-乌克兰-02
+  - Hanker-哈萨克斯坦-02
+  - Hanker-罗马尼亚-02
+  - Hanker-塞尔维亚-02
+  - Hanker-瑞典-02
+  - Hanker-比利时-02
+  - Hanker-捷克共和国-02
+  - Hanker-丹麦-02
+  - Hanker-爱沙尼亚-02
+  - Hanker-匈牙利-02
+  - Hanker-冰岛-02
+  - Hanker-土耳其-02
+  - Hanker-保加利亚-02
+  - Hanker-希腊-02
+  - Hanker-奥地利-02
+  - Hanker-南非-02
+  - Hanker-埃及-02
+  - Hanker-巴西-02
+  - Hanker-墨西哥-02
+  - Hanker-阿根廷-02
+  - Hanker-智利-02
+  - Hanker-秘鲁-02
+  - Hanker-哥伦比亚-02
+  - Hanker-厄瓜多尔-02
+  - Hanker-美国-26
+  - Hanker-美国-27
+  - Hanker-美国-28
+  - Hanker-美国-29
+  - Hanker-美国-30
+  - Hanker-美国-31
+  - Hanker-美国-32
+  - Hanker-美国-33
+  - Hanker-其他-02
+  - Hanker-其他-03
+- name: 自动选择
+  type: url-test
+  proxies:
+  - Hanker-日本-01
+  - Hanker-日本-02
+  - Hanker-日本-03
+  - Hanker-其他-01
+  - Hanker-日本-04
+  - Hanker-新加坡-01
+  - Hanker-日本-05
+  - Hanker-日本-06
+  - Hanker-韩国-01
+  - Hanker-台湾-01
+  - Hanker-香港-01
+  - Hanker-新加坡-02
+  - Hanker-新加坡-03
+  - Hanker-新加坡-04
+  - Hanker-新加坡-05
+  - Hanker-新加坡-06
+  - Hanker-新加坡-07
+  - Hanker-新加坡-08
+  - Hanker-新加坡-09
+  - Hanker-新加坡-10
+  - Hanker-日本-07
+  - Hanker-日本-08
+  - Hanker-日本-09
+  - Hanker-日本-10
+  - Hanker-日本-11
+  - Hanker-美国-01
+  - Hanker-美国-02
+  - Hanker-美国-03
+  - Hanker-美国-04
+  - Hanker-美国-05
+  - Hanker-美国-06
+  - Hanker-美国-07
+  - Hanker-台湾-02
+  - Hanker-台湾-03
+  - Hanker-台湾-04
+  - Hanker-台湾-05
+  - Hanker-台湾-06
+  - Hanker-香港-02
+  - Hanker-香港-03
+  - Hanker-香港-04
+  - Hanker-香港-05
+  - Hanker-香港-06
+  - Hanker-日本-12
+  - Hanker-日本-13
+  - Hanker-日本-14
+  - Hanker-日本-15
+  - Hanker-日本-16
+  - Hanker-日本-17
+  - Hanker-日本-18
+  - Hanker-日本-19
+  - Hanker-日本-20
+  - Hanker-日本-21
+  - Hanker-日本-22
+  - Hanker-日本-23
+  - Hanker-日本-24
+  - Hanker-美国-08
+  - Hanker-美国-09
+  - Hanker-美国-10
+  - Hanker-美国-11
+  - Hanker-美国-12
+  - Hanker-美国-13
+  - Hanker-美国-14
+  - Hanker-台湾-07
+  - Hanker-台湾-08
+  - Hanker-台湾-09
+  - Hanker-台湾-10
+  - Hanker-香港-07
+  - Hanker-香港-08
+  - Hanker-香港-09
+  - Hanker-香港-10
+  - Hanker-香港-11
+  - Hanker-韩国-02
+  - Hanker-韩国-03
+  - Hanker-韩国-04
+  - Hanker-韩国-05
+  - Hanker-中国澳门-01
+  - Hanker-马来西亚-01
+  - Hanker-马来西亚-02
+  - Hanker-泰国-01
+  - Hanker-泰国-02
+  - Hanker-缅甸-01
+  - Hanker-印尼-01
+  - Hanker-柬埔寨-01
+  - Hanker-菲律宾-01
+  - Hanker-越南-01
+  - Hanker-印度-01
+  - Hanker-尼泊尔-01
+  - Hanker-孟加拉国-01
+  - Hanker-巴基斯坦-01
+  - Hanker-澳大利亚-01
+  - Hanker-加拿大-01
+  - Hanker-迪拜-01
+  - Hanker-沙特阿拉伯-01
+  - Hanker-以色列-01
+  - Hanker-伊拉克-01
+  - Hanker-巴林-01
+  - Hanker-阿曼-01
+  - Hanker-卡塔尔-01
+  - Hanker-俄罗斯-01
+  - Hanker-法国-01
+  - Hanker-英国-01
+  - Hanker-德国-01
+  - Hanker-西班牙-01
+  - Hanker-意大利-01
+  - Hanker-荷兰-01
+  - Hanker-挪威-01
+  - Hanker-瑞士-01
+  - Hanker-波兰-01
+  - Hanker-芬兰-01
+  - Hanker-乌克兰-01
+  - Hanker-哈萨克斯坦-01
+  - Hanker-罗马尼亚-01
+  - Hanker-塞尔维亚-01
+  - Hanker-瑞典-01
+  - Hanker-比利时-01
+  - Hanker-捷克共和国-01
+  - Hanker-丹麦-01
+  - Hanker-爱沙尼亚-01
+  - Hanker-匈牙利-01
+  - Hanker-冰岛-01
+  - Hanker-土耳其-01
+  - Hanker-保加利亚-01
+  - Hanker-希腊-01
+  - Hanker-奥地利-01
+  - Hanker-南非-01
+  - Hanker-埃及-01
+  - Hanker-巴西-01
+  - Hanker-墨西哥-01
+  - Hanker-阿根廷-01
+  - Hanker-智利-01
+  - Hanker-秘鲁-01
+  - Hanker-哥伦比亚-01
+  - Hanker-厄瓜多尔-01
+  - Hanker-美国-15
+  - Hanker-美国-16
+  - Hanker-美国-17
+  - Hanker-美国-18
+  - Hanker-美国-19
+  - Hanker-美国-20
+  - Hanker-美国-21
+  - Hanker-美国-22
+  - Hanker-日本-25
+  - Hanker-日本-26
+  - Hanker-日本-27
+  - Hanker-日本-28
+  - Hanker-日本-29
+  - Hanker-美国-23
+  - Hanker-美国-24
+  - Hanker-美国-25
+  - Hanker-台湾-11
+  - Hanker-台湾-12
+  - Hanker-台湾-13
+  - Hanker-台湾-14
+  - Hanker-台湾-15
+  - Hanker-香港-12
+  - Hanker-香港-13
+  - Hanker-香港-14
+  - Hanker-香港-15
+  - Hanker-香港-16
+  - Hanker-韩国-06
+  - Hanker-韩国-07
+  - Hanker-韩国-08
+  - Hanker-韩国-09
+  - Hanker-新加坡-11
+  - Hanker-新加坡-12
+  - Hanker-新加坡-13
+  - Hanker-新加坡-14
+  - Hanker-新加坡-15
+  - Hanker-新加坡-16
+  - Hanker-新加坡-17
+  - Hanker-新加坡-18
+  - Hanker-新加坡-19
+  - Hanker-新加坡-20
+  - Hanker-中国澳门-02
+  - Hanker-马来西亚-03
+  - Hanker-马来西亚-04
+  - Hanker-泰国-03
+  - Hanker-缅甸-02
+  - Hanker-印尼-02
+  - Hanker-柬埔寨-02
+  - Hanker-菲律宾-02
+  - Hanker-越南-02
+  - Hanker-印度-02
+  - Hanker-尼泊尔-02
+  - Hanker-孟加拉国-02
+  - Hanker-巴基斯坦-02
+  - Hanker-澳大利亚-02
+  - Hanker-加拿大-02
+  - Hanker-迪拜-02
+  - Hanker-沙特阿拉伯-02
+  - Hanker-以色列-02
+  - Hanker-伊拉克-02
+  - Hanker-巴林-02
+  - Hanker-阿曼-02
+  - Hanker-卡塔尔-02
+  - Hanker-俄罗斯-02
+  - Hanker-法国-02
+  - Hanker-英国-02
+  - Hanker-德国-02
+  - Hanker-西班牙-02
+  - Hanker-意大利-02
+  - Hanker-荷兰-02
+  - Hanker-挪威-02
+  - Hanker-瑞士-02
+  - Hanker-波兰-02
+  - Hanker-芬兰-02
+  - Hanker-乌克兰-02
+  - Hanker-哈萨克斯坦-02
+  - Hanker-罗马尼亚-02
+  - Hanker-塞尔维亚-02
+  - Hanker-瑞典-02
+  - Hanker-比利时-02
+  - Hanker-捷克共和国-02
+  - Hanker-丹麦-02
+  - Hanker-爱沙尼亚-02
+  - Hanker-匈牙利-02
+  - Hanker-冰岛-02
+  - Hanker-土耳其-02
+  - Hanker-保加利亚-02
+  - Hanker-希腊-02
+  - Hanker-奥地利-02
+  - Hanker-南非-02
+  - Hanker-埃及-02
+  - Hanker-巴西-02
+  - Hanker-墨西哥-02
+  - Hanker-阿根廷-02
+  - Hanker-智利-02
+  - Hanker-秘鲁-02
+  - Hanker-哥伦比亚-02
+  - Hanker-厄瓜多尔-02
+  - Hanker-美国-26
+  - Hanker-美国-27
+  - Hanker-美国-28
+  - Hanker-美国-29
+  - Hanker-美国-30
+  - Hanker-美国-31
+  - Hanker-美国-32
+  - Hanker-美国-33
+  - Hanker-其他-02
+  - Hanker-其他-03
+  url: http://www.gstatic.com/generate_204
+  interval: 86400
+- name: 故障转移
+  type: fallback
+  proxies:
+  - Hanker-日本-01
+  - Hanker-日本-02
+  - Hanker-日本-03
+  - Hanker-其他-01
+  - Hanker-日本-04
+  - Hanker-新加坡-01
+  - Hanker-日本-05
+  - Hanker-日本-06
+  - Hanker-韩国-01
+  - Hanker-台湾-01
+  - Hanker-香港-01
+  - Hanker-新加坡-02
+  - Hanker-新加坡-03
+  - Hanker-新加坡-04
+  - Hanker-新加坡-05
+  - Hanker-新加坡-06
+  - Hanker-新加坡-07
+  - Hanker-新加坡-08
+  - Hanker-新加坡-09
+  - Hanker-新加坡-10
+  - Hanker-日本-07
+  - Hanker-日本-08
+  - Hanker-日本-09
+  - Hanker-日本-10
+  - Hanker-日本-11
+  - Hanker-美国-01
+  - Hanker-美国-02
+  - Hanker-美国-03
+  - Hanker-美国-04
+  - Hanker-美国-05
+  - Hanker-美国-06
+  - Hanker-美国-07
+  - Hanker-台湾-02
+  - Hanker-台湾-03
+  - Hanker-台湾-04
+  - Hanker-台湾-05
+  - Hanker-台湾-06
+  - Hanker-香港-02
+  - Hanker-香港-03
+  - Hanker-香港-04
+  - Hanker-香港-05
+  - Hanker-香港-06
+  - Hanker-日本-12
+  - Hanker-日本-13
+  - Hanker-日本-14
+  - Hanker-日本-15
+  - Hanker-日本-16
+  - Hanker-日本-17
+  - Hanker-日本-18
+  - Hanker-日本-19
+  - Hanker-日本-20
+  - Hanker-日本-21
+  - Hanker-日本-22
+  - Hanker-日本-23
+  - Hanker-日本-24
+  - Hanker-美国-08
+  - Hanker-美国-09
+  - Hanker-美国-10
+  - Hanker-美国-11
+  - Hanker-美国-12
+  - Hanker-美国-13
+  - Hanker-美国-14
+  - Hanker-台湾-07
+  - Hanker-台湾-08
+  - Hanker-台湾-09
+  - Hanker-台湾-10
+  - Hanker-香港-07
+  - Hanker-香港-08
+  - Hanker-香港-09
+  - Hanker-香港-10
+  - Hanker-香港-11
+  - Hanker-韩国-02
+  - Hanker-韩国-03
+  - Hanker-韩国-04
+  - Hanker-韩国-05
+  - Hanker-中国澳门-01
+  - Hanker-马来西亚-01
+  - Hanker-马来西亚-02
+  - Hanker-泰国-01
+  - Hanker-泰国-02
+  - Hanker-缅甸-01
+  - Hanker-印尼-01
+  - Hanker-柬埔寨-01
+  - Hanker-菲律宾-01
+  - Hanker-越南-01
+  - Hanker-印度-01
+  - Hanker-尼泊尔-01
+  - Hanker-孟加拉国-01
+  - Hanker-巴基斯坦-01
+  - Hanker-澳大利亚-01
+  - Hanker-加拿大-01
+  - Hanker-迪拜-01
+  - Hanker-沙特阿拉伯-01
+  - Hanker-以色列-01
+  - Hanker-伊拉克-01
+  - Hanker-巴林-01
+  - Hanker-阿曼-01
+  - Hanker-卡塔尔-01
+  - Hanker-俄罗斯-01
+  - Hanker-法国-01
+  - Hanker-英国-01
+  - Hanker-德国-01
+  - Hanker-西班牙-01
+  - Hanker-意大利-01
+  - Hanker-荷兰-01
+  - Hanker-挪威-01
+  - Hanker-瑞士-01
+  - Hanker-波兰-01
+  - Hanker-芬兰-01
+  - Hanker-乌克兰-01
+  - Hanker-哈萨克斯坦-01
+  - Hanker-罗马尼亚-01
+  - Hanker-塞尔维亚-01
+  - Hanker-瑞典-01
+  - Hanker-比利时-01
+  - Hanker-捷克共和国-01
+  - Hanker-丹麦-01
+  - Hanker-爱沙尼亚-01
+  - Hanker-匈牙利-01
+  - Hanker-冰岛-01
+  - Hanker-土耳其-01
+  - Hanker-保加利亚-01
+  - Hanker-希腊-01
+  - Hanker-奥地利-01
+  - Hanker-南非-01
+  - Hanker-埃及-01
+  - Hanker-巴西-01
+  - Hanker-墨西哥-01
+  - Hanker-阿根廷-01
+  - Hanker-智利-01
+  - Hanker-秘鲁-01
+  - Hanker-哥伦比亚-01
+  - Hanker-厄瓜多尔-01
+  - Hanker-美国-15
+  - Hanker-美国-16
+  - Hanker-美国-17
+  - Hanker-美国-18
+  - Hanker-美国-19
+  - Hanker-美国-20
+  - Hanker-美国-21
+  - Hanker-美国-22
+  - Hanker-日本-25
+  - Hanker-日本-26
+  - Hanker-日本-27
+  - Hanker-日本-28
+  - Hanker-日本-29
+  - Hanker-美国-23
+  - Hanker-美国-24
+  - Hanker-美国-25
+  - Hanker-台湾-11
+  - Hanker-台湾-12
+  - Hanker-台湾-13
+  - Hanker-台湾-14
+  - Hanker-台湾-15
+  - Hanker-香港-12
+  - Hanker-香港-13
+  - Hanker-香港-14
+  - Hanker-香港-15
+  - Hanker-香港-16
+  - Hanker-韩国-06
+  - Hanker-韩国-07
+  - Hanker-韩国-08
+  - Hanker-韩国-09
+  - Hanker-新加坡-11
+  - Hanker-新加坡-12
+  - Hanker-新加坡-13
+  - Hanker-新加坡-14
+  - Hanker-新加坡-15
+  - Hanker-新加坡-16
+  - Hanker-新加坡-17
+  - Hanker-新加坡-18
+  - Hanker-新加坡-19
+  - Hanker-新加坡-20
+  - Hanker-中国澳门-02
+  - Hanker-马来西亚-03
+  - Hanker-马来西亚-04
+  - Hanker-泰国-03
+  - Hanker-缅甸-02
+  - Hanker-印尼-02
+  - Hanker-柬埔寨-02
+  - Hanker-菲律宾-02
+  - Hanker-越南-02
+  - Hanker-印度-02
+  - Hanker-尼泊尔-02
+  - Hanker-孟加拉国-02
+  - Hanker-巴基斯坦-02
+  - Hanker-澳大利亚-02
+  - Hanker-加拿大-02
+  - Hanker-迪拜-02
+  - Hanker-沙特阿拉伯-02
+  - Hanker-以色列-02
+  - Hanker-伊拉克-02
+  - Hanker-巴林-02
+  - Hanker-阿曼-02
+  - Hanker-卡塔尔-02
+  - Hanker-俄罗斯-02
+  - Hanker-法国-02
+  - Hanker-英国-02
+  - Hanker-德国-02
+  - Hanker-西班牙-02
+  - Hanker-意大利-02
+  - Hanker-荷兰-02
+  - Hanker-挪威-02
+  - Hanker-瑞士-02
+  - Hanker-波兰-02
+  - Hanker-芬兰-02
+  - Hanker-乌克兰-02
+  - Hanker-哈萨克斯坦-02
+  - Hanker-罗马尼亚-02
+  - Hanker-塞尔维亚-02
+  - Hanker-瑞典-02
+  - Hanker-比利时-02
+  - Hanker-捷克共和国-02
+  - Hanker-丹麦-02
+  - Hanker-爱沙尼亚-02
+  - Hanker-匈牙利-02
+  - Hanker-冰岛-02
+  - Hanker-土耳其-02
+  - Hanker-保加利亚-02
+  - Hanker-希腊-02
+  - Hanker-奥地利-02
+  - Hanker-南非-02
+  - Hanker-埃及-02
+  - Hanker-巴西-02
+  - Hanker-墨西哥-02
+  - Hanker-阿根廷-02
+  - Hanker-智利-02
+  - Hanker-秘鲁-02
+  - Hanker-哥伦比亚-02
+  - Hanker-厄瓜多尔-02
+  - Hanker-美国-26
+  - Hanker-美国-27
+  - Hanker-美国-28
+  - Hanker-美国-29
+  - Hanker-美国-30
+  - Hanker-美国-31
+  - Hanker-美国-32
+  - Hanker-美国-33
+  - Hanker-其他-02
+  - Hanker-其他-03
+  url: http://www.gstatic.com/generate_204
+  interval: 7200
+rules:
+- DOMAIN,www.cloudflarework.com,DIRECT
+- DOMAIN-SUFFIX,services.googleapis.cn,Hanker VPN
+- DOMAIN-SUFFIX,xn--ngstr-lra8j.com,Hanker VPN
+- DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
+- DOMAIN,safebrowsing.googleapis.com,DIRECT
+- DOMAIN,developer.apple.com,Hanker VPN
+- DOMAIN-SUFFIX,digicert.com,Hanker VPN
+- DOMAIN,ocsp.apple.com,Hanker VPN
+- DOMAIN,ocsp.comodoca.com,Hanker VPN
+- DOMAIN,ocsp.usertrust.com,Hanker VPN
+- DOMAIN,ocsp.sectigo.com,Hanker VPN
+- DOMAIN,ocsp.verisign.net,Hanker VPN
+- DOMAIN-SUFFIX,apple-dns.net,Hanker VPN
+- DOMAIN,testflight.apple.com,Hanker VPN
+- DOMAIN,sandbox.itunes.apple.com,Hanker VPN
+- DOMAIN,itunes.apple.com,Hanker VPN
+- DOMAIN-SUFFIX,apps.apple.com,Hanker VPN
+- DOMAIN-SUFFIX,blobstore.apple.com,Hanker VPN
+- DOMAIN,cvws.icloud-content.com,Hanker VPN
+- DOMAIN-SUFFIX,mzstatic.com,DIRECT
+- DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,aaplimg.com,DIRECT
+- DOMAIN-SUFFIX,cdn20.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,akadns.net,DIRECT
+- DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+- DOMAIN-SUFFIX,edgekey.net,DIRECT
+- DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT
+- DOMAIN-SUFFIX,mwcname.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,apple-mapkit.com,DIRECT
+- DOMAIN-SUFFIX,126.com,DIRECT
+- DOMAIN-SUFFIX,126.net,DIRECT
+- DOMAIN-SUFFIX,127.net,DIRECT
+- DOMAIN-SUFFIX,163.com,DIRECT
+- DOMAIN-SUFFIX,360buyimg.com,DIRECT
+- DOMAIN-SUFFIX,36kr.com,DIRECT
+- DOMAIN-SUFFIX,acfun.tv,DIRECT
+- DOMAIN-SUFFIX,air-matters.com,DIRECT
+- DOMAIN-SUFFIX,aixifan.com,DIRECT
+- DOMAIN-KEYWORD,alicdn,DIRECT
+- DOMAIN-KEYWORD,alipay,DIRECT
+- DOMAIN-KEYWORD,taobao,DIRECT
+- DOMAIN-SUFFIX,amap.com,DIRECT
+- DOMAIN-SUFFIX,autonavi.com,DIRECT
+- DOMAIN-KEYWORD,baidu,DIRECT
+- DOMAIN-SUFFIX,bdimg.com,DIRECT
+- DOMAIN-SUFFIX,bdstatic.com,DIRECT
+- DOMAIN-SUFFIX,bilibili.com,DIRECT
+- DOMAIN-SUFFIX,bilivideo.com,DIRECT
+- DOMAIN-SUFFIX,caiyunapp.com,DIRECT
+- DOMAIN-SUFFIX,clouddn.com,DIRECT
+- DOMAIN-SUFFIX,cnbeta.com,DIRECT
+- DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+- DOMAIN-SUFFIX,cootekservice.com,DIRECT
+- DOMAIN-SUFFIX,csdn.net,DIRECT
+- DOMAIN-SUFFIX,ctrip.com,DIRECT
+- DOMAIN-SUFFIX,dgtle.com,DIRECT
+- DOMAIN-SUFFIX,dianping.com,DIRECT
+- DOMAIN-SUFFIX,douban.com,DIRECT
+- DOMAIN-SUFFIX,doubanio.com,DIRECT
+- DOMAIN-SUFFIX,duokan.com,DIRECT
+- DOMAIN-SUFFIX,easou.com,DIRECT
+- DOMAIN-SUFFIX,ele.me,DIRECT
+- DOMAIN-SUFFIX,feng.com,DIRECT
+- DOMAIN-SUFFIX,fir.im,DIRECT
+- DOMAIN-SUFFIX,frdic.com,DIRECT
+- DOMAIN-SUFFIX,g-cores.com,DIRECT
+- DOMAIN-SUFFIX,godic.net,DIRECT
+- DOMAIN-SUFFIX,gtimg.com,DIRECT
+- DOMAIN,cdn.hockeyapp.net,DIRECT
+- DOMAIN-SUFFIX,hongxiu.com,DIRECT
+- DOMAIN-SUFFIX,hxcdn.net,DIRECT
+- DOMAIN-SUFFIX,iciba.com,DIRECT
+- DOMAIN-SUFFIX,ifeng.com,DIRECT
+- DOMAIN-SUFFIX,ifengimg.com,DIRECT
+- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,iqiyi.com,DIRECT
+- DOMAIN-SUFFIX,jd.com,DIRECT
+- DOMAIN-SUFFIX,jianshu.com,DIRECT
+- DOMAIN-SUFFIX,knewone.com,DIRECT
+- DOMAIN-SUFFIX,le.com,DIRECT
+- DOMAIN-SUFFIX,lecloud.com,DIRECT
+- DOMAIN-SUFFIX,lemicp.com,DIRECT
+- DOMAIN-SUFFIX,licdn.com,DIRECT
+- DOMAIN-SUFFIX,luoo.net,DIRECT
+- DOMAIN-SUFFIX,meituan.com,DIRECT
+- DOMAIN-SUFFIX,meituan.net,DIRECT
+- DOMAIN-SUFFIX,mi.com,DIRECT
+- DOMAIN-SUFFIX,miaopai.com,DIRECT
+- DOMAIN-SUFFIX,microsoft.com,DIRECT
+- DOMAIN-SUFFIX,microsoftonline.com,DIRECT
+- DOMAIN-SUFFIX,miui.com,DIRECT
+- DOMAIN-SUFFIX,miwifi.com,DIRECT
+- DOMAIN-SUFFIX,mob.com,DIRECT
+- DOMAIN-SUFFIX,netease.com,DIRECT
+- DOMAIN-SUFFIX,office.com,DIRECT
+- DOMAIN-SUFFIX,office365.com,DIRECT
+- DOMAIN-KEYWORD,officecdn,DIRECT
+- DOMAIN-SUFFIX,oschina.net,DIRECT
+- DOMAIN-SUFFIX,ppsimg.com,DIRECT
+- DOMAIN-SUFFIX,pstatp.com,DIRECT
+- DOMAIN-SUFFIX,qcloud.com,DIRECT
+- DOMAIN-SUFFIX,qdaily.com,DIRECT
+- DOMAIN-SUFFIX,qdmm.com,DIRECT
+- DOMAIN-SUFFIX,qhimg.com,DIRECT
+- DOMAIN-SUFFIX,qhres.com,DIRECT
+- DOMAIN-SUFFIX,qidian.com,DIRECT
+- DOMAIN-SUFFIX,qihucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiniu.com,DIRECT
+- DOMAIN-SUFFIX,qiniucdn.com,DIRECT
+- DOMAIN-SUFFIX,qiyipic.com,DIRECT
+- DOMAIN-SUFFIX,qq.com,DIRECT
+- DOMAIN-SUFFIX,qqurl.com,DIRECT
+- DOMAIN-SUFFIX,rarbg.to,DIRECT
+- DOMAIN-SUFFIX,ruguoapp.com,DIRECT
+- DOMAIN-SUFFIX,segmentfault.com,DIRECT
+- DOMAIN-SUFFIX,sinaapp.com,DIRECT
+- DOMAIN-SUFFIX,smzdm.com,DIRECT
+- DOMAIN-SUFFIX,snapdrop.net,DIRECT
+- DOMAIN-SUFFIX,sogou.com,DIRECT
+- DOMAIN-SUFFIX,sogoucdn.com,DIRECT
+- DOMAIN-SUFFIX,sohu.com,DIRECT
+- DOMAIN-SUFFIX,soku.com,DIRECT
+- DOMAIN-SUFFIX,speedtest.net,DIRECT
+- DOMAIN-SUFFIX,sspai.com,DIRECT
+- DOMAIN-SUFFIX,suning.com,DIRECT
+- DOMAIN-SUFFIX,taobao.com,DIRECT
+- DOMAIN-SUFFIX,tencent.com,DIRECT
+- DOMAIN-SUFFIX,tenpay.com,DIRECT
+- DOMAIN-SUFFIX,tianyancha.com,DIRECT
+- DOMAIN-SUFFIX,tmall.com,DIRECT
+- DOMAIN-SUFFIX,tudou.com,DIRECT
+- DOMAIN-SUFFIX,umetrip.com,DIRECT
+- DOMAIN-SUFFIX,upaiyun.com,DIRECT
+- DOMAIN-SUFFIX,upyun.com,DIRECT
+- DOMAIN-SUFFIX,veryzhun.com,DIRECT
+- DOMAIN-SUFFIX,weather.com,DIRECT
+- DOMAIN-SUFFIX,weibo.com,DIRECT
+- DOMAIN-SUFFIX,xiami.com,DIRECT
+- DOMAIN-SUFFIX,xiami.net,DIRECT
+- DOMAIN-SUFFIX,xiaomicp.com,DIRECT
+- DOMAIN-SUFFIX,ximalaya.com,DIRECT
+- DOMAIN-SUFFIX,xmcdn.com,DIRECT
+- DOMAIN-SUFFIX,xunlei.com,DIRECT
+- DOMAIN-SUFFIX,yhd.com,DIRECT
+- DOMAIN-SUFFIX,yihaodianimg.com,DIRECT
+- DOMAIN-SUFFIX,yinxiang.com,DIRECT
+- DOMAIN-SUFFIX,ykimg.com,DIRECT
+- DOMAIN-SUFFIX,youdao.com,DIRECT
+- DOMAIN-SUFFIX,youku.com,DIRECT
+- DOMAIN-SUFFIX,zealer.com,DIRECT
+- DOMAIN-SUFFIX,zhihu.com,DIRECT
+- DOMAIN-SUFFIX,zhimg.com,DIRECT
+- DOMAIN-SUFFIX,zimuzu.tv,DIRECT
+- DOMAIN-SUFFIX,zoho.com,DIRECT
+- DOMAIN-KEYWORD,amazon,Hanker VPN
+- DOMAIN-KEYWORD,google,Hanker VPN
+- DOMAIN-KEYWORD,gmail,Hanker VPN
+- DOMAIN-KEYWORD,youtube,Hanker VPN
+- DOMAIN-KEYWORD,facebook,Hanker VPN
+- DOMAIN-SUFFIX,fb.me,Hanker VPN
+- DOMAIN-SUFFIX,fbcdn.net,Hanker VPN
+- DOMAIN-KEYWORD,twitter,Hanker VPN
+- DOMAIN-KEYWORD,instagram,Hanker VPN
+- DOMAIN-KEYWORD,dropbox,Hanker VPN
+- DOMAIN-SUFFIX,twimg.com,Hanker VPN
+- DOMAIN-KEYWORD,blogspot,Hanker VPN
+- DOMAIN-SUFFIX,youtu.be,Hanker VPN
+- DOMAIN-KEYWORD,whatsapp,Hanker VPN
+- DOMAIN-SUFFIX,9to5mac.com,Hanker VPN
+- DOMAIN-SUFFIX,abpchina.org,Hanker VPN
+- DOMAIN-SUFFIX,adblockplus.org,Hanker VPN
+- DOMAIN-SUFFIX,adobe.com,Hanker VPN
+- DOMAIN-SUFFIX,akamaized.net,Hanker VPN
+- DOMAIN-SUFFIX,alfredapp.com,Hanker VPN
+- DOMAIN-SUFFIX,amplitude.com,Hanker VPN
+- DOMAIN-SUFFIX,ampproject.org,Hanker VPN
+- DOMAIN-SUFFIX,android.com,Hanker VPN
+- DOMAIN-SUFFIX,angularjs.org,Hanker VPN
+- DOMAIN-SUFFIX,aolcdn.com,Hanker VPN
+- DOMAIN-SUFFIX,apkpure.com,Hanker VPN
+- DOMAIN-SUFFIX,appledaily.com,Hanker VPN
+- DOMAIN-SUFFIX,appshopper.com,Hanker VPN
+- DOMAIN-SUFFIX,appspot.com,Hanker VPN
+- DOMAIN-SUFFIX,arcgis.com,Hanker VPN
+- DOMAIN-SUFFIX,archive.org,Hanker VPN
+- DOMAIN-SUFFIX,armorgames.com,Hanker VPN
+- DOMAIN-SUFFIX,aspnetcdn.com,Hanker VPN
+- DOMAIN-SUFFIX,att.com,Hanker VPN
+- DOMAIN-SUFFIX,awsstatic.com,Hanker VPN
+- DOMAIN-SUFFIX,azureedge.net,Hanker VPN
+- DOMAIN-SUFFIX,azurewebsites.net,Hanker VPN
+- DOMAIN-SUFFIX,bing.com,Hanker VPN
+- DOMAIN-SUFFIX,bintray.com,Hanker VPN
+- DOMAIN-SUFFIX,bit.com,Hanker VPN
+- DOMAIN-SUFFIX,bit.ly,Hanker VPN
+- DOMAIN-SUFFIX,bitbucket.org,Hanker VPN
+- DOMAIN-SUFFIX,bjango.com,Hanker VPN
+- DOMAIN-SUFFIX,bkrtx.com,Hanker VPN
+- DOMAIN-SUFFIX,blog.com,Hanker VPN
+- DOMAIN-SUFFIX,blogcdn.com,Hanker VPN
+- DOMAIN-SUFFIX,blogger.com,Hanker VPN
+- DOMAIN-SUFFIX,blogsmithmedia.com,Hanker VPN
+- DOMAIN-SUFFIX,blogspot.com,Hanker VPN
+- DOMAIN-SUFFIX,blogspot.hk,Hanker VPN
+- DOMAIN-SUFFIX,bloomberg.com,Hanker VPN
+- DOMAIN-SUFFIX,box.com,Hanker VPN
+- DOMAIN-SUFFIX,box.net,Hanker VPN
+- DOMAIN-SUFFIX,cachefly.net,Hanker VPN
+- DOMAIN-SUFFIX,chromium.org,Hanker VPN
+- DOMAIN-SUFFIX,cl.ly,Hanker VPN
+- DOMAIN-SUFFIX,cloudflare.com,Hanker VPN
+- DOMAIN-SUFFIX,cloudfront.net,Hanker VPN
+- DOMAIN-SUFFIX,cloudmagic.com,Hanker VPN
+- DOMAIN-SUFFIX,cmail19.com,Hanker VPN
+- DOMAIN-SUFFIX,cnet.com,Hanker VPN
+- DOMAIN-SUFFIX,cocoapods.org,Hanker VPN
+- DOMAIN-SUFFIX,comodoca.com,Hanker VPN
+- DOMAIN-SUFFIX,crashlytics.com,Hanker VPN
+- DOMAIN-SUFFIX,culturedcode.com,Hanker VPN
+- DOMAIN-SUFFIX,d.pr,Hanker VPN
+- DOMAIN-SUFFIX,danilo.to,Hanker VPN
+- DOMAIN-SUFFIX,dayone.me,Hanker VPN
+- DOMAIN-SUFFIX,db.tt,Hanker VPN
+- DOMAIN-SUFFIX,deskconnect.com,Hanker VPN
+- DOMAIN-SUFFIX,disq.us,Hanker VPN
+- DOMAIN-SUFFIX,disqus.com,Hanker VPN
+- DOMAIN-SUFFIX,disquscdn.com,Hanker VPN
+- DOMAIN-SUFFIX,dnsimple.com,Hanker VPN
+- DOMAIN-SUFFIX,docker.com,Hanker VPN
+- DOMAIN-SUFFIX,dribbble.com,Hanker VPN
+- DOMAIN-SUFFIX,droplr.com,Hanker VPN
+- DOMAIN-SUFFIX,duckduckgo.com,Hanker VPN
+- DOMAIN-SUFFIX,dueapp.com,Hanker VPN
+- DOMAIN-SUFFIX,dytt8.net,Hanker VPN
+- DOMAIN-SUFFIX,edgecastcdn.net,Hanker VPN
+- DOMAIN-SUFFIX,edgekey.net,Hanker VPN
+- DOMAIN-SUFFIX,edgesuite.net,Hanker VPN
+- DOMAIN-SUFFIX,engadget.com,Hanker VPN
+- DOMAIN-SUFFIX,entrust.net,Hanker VPN
+- DOMAIN-SUFFIX,eurekavpt.com,Hanker VPN
+- DOMAIN-SUFFIX,evernote.com,Hanker VPN
+- DOMAIN-SUFFIX,fabric.io,Hanker VPN
+- DOMAIN-SUFFIX,fast.com,Hanker VPN
+- DOMAIN-SUFFIX,fastly.net,Hanker VPN
+- DOMAIN-SUFFIX,fc2.com,Hanker VPN
+- DOMAIN-SUFFIX,feedburner.com,Hanker VPN
+- DOMAIN-SUFFIX,feedly.com,Hanker VPN
+- DOMAIN-SUFFIX,feedsportal.com,Hanker VPN
+- DOMAIN-SUFFIX,fiftythree.com,Hanker VPN
+- DOMAIN-SUFFIX,firebaseio.com,Hanker VPN
+- DOMAIN-SUFFIX,flexibits.com,Hanker VPN
+- DOMAIN-SUFFIX,flickr.com,Hanker VPN
+- DOMAIN-SUFFIX,flipboard.com,Hanker VPN
+- DOMAIN-SUFFIX,g.co,Hanker VPN
+- DOMAIN-SUFFIX,gabia.net,Hanker VPN
+- DOMAIN-SUFFIX,geni.us,Hanker VPN
+- DOMAIN-SUFFIX,gfx.ms,Hanker VPN
+- DOMAIN-SUFFIX,ggpht.com,Hanker VPN
+- DOMAIN-SUFFIX,ghostnoteapp.com,Hanker VPN
+- DOMAIN-SUFFIX,git.io,Hanker VPN
+- DOMAIN-KEYWORD,github,Hanker VPN
+- DOMAIN-SUFFIX,globalsign.com,Hanker VPN
+- DOMAIN-SUFFIX,gmodules.com,Hanker VPN
+- DOMAIN-SUFFIX,godaddy.com,Hanker VPN
+- DOMAIN-SUFFIX,golang.org,Hanker VPN
+- DOMAIN-SUFFIX,gongm.in,Hanker VPN
+- DOMAIN-SUFFIX,goo.gl,Hanker VPN
+- DOMAIN-SUFFIX,goodreaders.com,Hanker VPN
+- DOMAIN-SUFFIX,goodreads.com,Hanker VPN
+- DOMAIN-SUFFIX,gravatar.com,Hanker VPN
+- DOMAIN-SUFFIX,gstatic.com,Hanker VPN
+- DOMAIN-SUFFIX,gvt0.com,Hanker VPN
+- DOMAIN-SUFFIX,hockeyapp.net,Hanker VPN
+- DOMAIN-SUFFIX,hotmail.com,Hanker VPN
+- DOMAIN-SUFFIX,icons8.com,Hanker VPN
+- DOMAIN-SUFFIX,ifixit.com,Hanker VPN
+- DOMAIN-SUFFIX,ift.tt,Hanker VPN
+- DOMAIN-SUFFIX,ifttt.com,Hanker VPN
+- DOMAIN-SUFFIX,iherb.com,Hanker VPN
+- DOMAIN-SUFFIX,imageshack.us,Hanker VPN
+- DOMAIN-SUFFIX,img.ly,Hanker VPN
+- DOMAIN-SUFFIX,imgur.com,Hanker VPN
+- DOMAIN-SUFFIX,imore.com,Hanker VPN
+- DOMAIN-SUFFIX,instapaper.com,Hanker VPN
+- DOMAIN-SUFFIX,ipn.li,Hanker VPN
+- DOMAIN-SUFFIX,is.gd,Hanker VPN
+- DOMAIN-SUFFIX,issuu.com,Hanker VPN
+- DOMAIN-SUFFIX,itgonglun.com,Hanker VPN
+- DOMAIN-SUFFIX,itun.es,Hanker VPN
+- DOMAIN-SUFFIX,ixquick.com,Hanker VPN
+- DOMAIN-SUFFIX,j.mp,Hanker VPN
+- DOMAIN-SUFFIX,js.revsci.net,Hanker VPN
+- DOMAIN-SUFFIX,jshint.com,Hanker VPN
+- DOMAIN-SUFFIX,jtvnw.net,Hanker VPN
+- DOMAIN-SUFFIX,justgetflux.com,Hanker VPN
+- DOMAIN-SUFFIX,kat.cr,Hanker VPN
+- DOMAIN-SUFFIX,klip.me,Hanker VPN
+- DOMAIN-SUFFIX,libsyn.com,Hanker VPN
+- DOMAIN-SUFFIX,linkedin.com,Hanker VPN
+- DOMAIN-SUFFIX,line-apps.com,Hanker VPN
+- DOMAIN-SUFFIX,linode.com,Hanker VPN
+- DOMAIN-SUFFIX,lithium.com,Hanker VPN
+- DOMAIN-SUFFIX,littlehj.com,Hanker VPN
+- DOMAIN-SUFFIX,live.com,Hanker VPN
+- DOMAIN-SUFFIX,live.net,Hanker VPN
+- DOMAIN-SUFFIX,livefilestore.com,Hanker VPN
+- DOMAIN-SUFFIX,llnwd.net,Hanker VPN
+- DOMAIN-SUFFIX,macid.co,Hanker VPN
+- DOMAIN-SUFFIX,macromedia.com,Hanker VPN
+- DOMAIN-SUFFIX,macrumors.com,Hanker VPN
+- DOMAIN-SUFFIX,mashable.com,Hanker VPN
+- DOMAIN-SUFFIX,mathjax.org,Hanker VPN
+- DOMAIN-SUFFIX,medium.com,Hanker VPN
+- DOMAIN-SUFFIX,mega.co.nz,Hanker VPN
+- DOMAIN-SUFFIX,mega.nz,Hanker VPN
+- DOMAIN-SUFFIX,megaupload.com,Hanker VPN
+- DOMAIN-SUFFIX,microsofttranslator.com,Hanker VPN
+- DOMAIN-SUFFIX,mindnode.com,Hanker VPN
+- DOMAIN-SUFFIX,mobile01.com,Hanker VPN
+- DOMAIN-SUFFIX,modmyi.com,Hanker VPN
+- DOMAIN-SUFFIX,msedge.net,Hanker VPN
+- DOMAIN-SUFFIX,myfontastic.com,Hanker VPN
+- DOMAIN-SUFFIX,name.com,Hanker VPN
+- DOMAIN-SUFFIX,nextmedia.com,Hanker VPN
+- DOMAIN-SUFFIX,nsstatic.net,Hanker VPN
+- DOMAIN-SUFFIX,nssurge.com,Hanker VPN
+- DOMAIN-SUFFIX,nyt.com,Hanker VPN
+- DOMAIN-SUFFIX,nytimes.com,Hanker VPN
+- DOMAIN-SUFFIX,omnigroup.com,Hanker VPN
+- DOMAIN-SUFFIX,onedrive.com,Hanker VPN
+- DOMAIN-SUFFIX,onenote.com,Hanker VPN
+- DOMAIN-SUFFIX,ooyala.com,Hanker VPN
+- DOMAIN-SUFFIX,openvpn.net,Hanker VPN
+- DOMAIN-SUFFIX,openwrt.org,Hanker VPN
+- DOMAIN-SUFFIX,orkut.com,Hanker VPN
+- DOMAIN-SUFFIX,osxdaily.com,Hanker VPN
+- DOMAIN-SUFFIX,outlook.com,Hanker VPN
+- DOMAIN-SUFFIX,ow.ly,Hanker VPN
+- DOMAIN-SUFFIX,paddleapi.com,Hanker VPN
+- DOMAIN-SUFFIX,parallels.com,Hanker VPN
+- DOMAIN-SUFFIX,parse.com,Hanker VPN
+- DOMAIN-SUFFIX,pdfexpert.com,Hanker VPN
+- DOMAIN-SUFFIX,periscope.tv,Hanker VPN
+- DOMAIN-SUFFIX,pinboard.in,Hanker VPN
+- DOMAIN-SUFFIX,pinterest.com,Hanker VPN
+- DOMAIN-SUFFIX,pixelmator.com,Hanker VPN
+- DOMAIN-SUFFIX,pixiv.net,Hanker VPN
+- DOMAIN-SUFFIX,playpcesor.com,Hanker VPN
+- DOMAIN-SUFFIX,playstation.com,Hanker VPN
+- DOMAIN-SUFFIX,playstation.com.hk,Hanker VPN
+- DOMAIN-SUFFIX,playstation.net,Hanker VPN
+- DOMAIN-SUFFIX,playstationnetwork.com,Hanker VPN
+- DOMAIN-SUFFIX,pushwoosh.com,Hanker VPN
+- DOMAIN-SUFFIX,rime.im,Hanker VPN
+- DOMAIN-SUFFIX,servebom.com,Hanker VPN
+- DOMAIN-SUFFIX,sfx.ms,Hanker VPN
+- DOMAIN-SUFFIX,shadowsocks.org,Hanker VPN
+- DOMAIN-SUFFIX,sharethis.com,Hanker VPN
+- DOMAIN-SUFFIX,shazam.com,Hanker VPN
+- DOMAIN-SUFFIX,skype.com,Hanker VPN
+- DOMAIN-SUFFIX,smartmailcloud.com,Hanker VPN
+- DOMAIN-SUFFIX,sndcdn.com,Hanker VPN
+- DOMAIN-SUFFIX,sony.com,Hanker VPN
+- DOMAIN-SUFFIX,soundcloud.com,Hanker VPN
+- DOMAIN-SUFFIX,sourceforge.net,Hanker VPN
+- DOMAIN-SUFFIX,spotify.com,Hanker VPN
+- DOMAIN-SUFFIX,squarespace.com,Hanker VPN
+- DOMAIN-SUFFIX,sstatic.net,Hanker VPN
+- DOMAIN-SUFFIX,st.luluku.pw,Hanker VPN
+- DOMAIN-SUFFIX,stackoverflow.com,Hanker VPN
+- DOMAIN-SUFFIX,startpage.com,Hanker VPN
+- DOMAIN-SUFFIX,staticflickr.com,Hanker VPN
+- DOMAIN-SUFFIX,steamcommunity.com,Hanker VPN
+- DOMAIN-SUFFIX,symauth.com,Hanker VPN
+- DOMAIN-SUFFIX,symcb.com,Hanker VPN
+- DOMAIN-SUFFIX,symcd.com,Hanker VPN
+- DOMAIN-SUFFIX,tapbots.com,Hanker VPN
+- DOMAIN-SUFFIX,tapbots.net,Hanker VPN
+- DOMAIN-SUFFIX,tdesktop.com,Hanker VPN
+- DOMAIN-SUFFIX,techcrunch.com,Hanker VPN
+- DOMAIN-SUFFIX,techsmith.com,Hanker VPN
+- DOMAIN-SUFFIX,thepiratebay.org,Hanker VPN
+- DOMAIN-SUFFIX,theverge.com,Hanker VPN
+- DOMAIN-SUFFIX,time.com,Hanker VPN
+- DOMAIN-SUFFIX,timeinc.net,Hanker VPN
+- DOMAIN-SUFFIX,tiny.cc,Hanker VPN
+- DOMAIN-SUFFIX,tinypic.com,Hanker VPN
+- DOMAIN-SUFFIX,tmblr.co,Hanker VPN
+- DOMAIN-SUFFIX,todoist.com,Hanker VPN
+- DOMAIN-SUFFIX,trello.com,Hanker VPN
+- DOMAIN-SUFFIX,trustasiassl.com,Hanker VPN
+- DOMAIN-SUFFIX,tumblr.co,Hanker VPN
+- DOMAIN-SUFFIX,tumblr.com,Hanker VPN
+- DOMAIN-SUFFIX,tweetdeck.com,Hanker VPN
+- DOMAIN-SUFFIX,tweetmarker.net,Hanker VPN
+- DOMAIN-SUFFIX,twitch.tv,Hanker VPN
+- DOMAIN-SUFFIX,txmblr.com,Hanker VPN
+- DOMAIN-SUFFIX,typekit.net,Hanker VPN
+- DOMAIN-SUFFIX,ubertags.com,Hanker VPN
+- DOMAIN-SUFFIX,ublock.org,Hanker VPN
+- DOMAIN-SUFFIX,ubnt.com,Hanker VPN
+- DOMAIN-SUFFIX,ulyssesapp.com,Hanker VPN
+- DOMAIN-SUFFIX,urchin.com,Hanker VPN
+- DOMAIN-SUFFIX,usertrust.com,Hanker VPN
+- DOMAIN-SUFFIX,v.gd,Hanker VPN
+- DOMAIN-SUFFIX,v2ex.com,Hanker VPN
+- DOMAIN-SUFFIX,vimeo.com,Hanker VPN
+- DOMAIN-SUFFIX,vimeocdn.com,Hanker VPN
+- DOMAIN-SUFFIX,vine.co,Hanker VPN
+- DOMAIN-SUFFIX,vivaldi.com,Hanker VPN
+- DOMAIN-SUFFIX,vox-cdn.com,Hanker VPN
+- DOMAIN-SUFFIX,vsco.co,Hanker VPN
+- DOMAIN-SUFFIX,vultr.com,Hanker VPN
+- DOMAIN-SUFFIX,w.org,Hanker VPN
+- DOMAIN-SUFFIX,w3schools.com,Hanker VPN
+- DOMAIN-SUFFIX,webtype.com,Hanker VPN
+- DOMAIN-SUFFIX,wikiwand.com,Hanker VPN
+- DOMAIN-SUFFIX,wikileaks.org,Hanker VPN
+- DOMAIN-SUFFIX,wikimedia.org,Hanker VPN
+- DOMAIN-SUFFIX,wikipedia.com,Hanker VPN
+- DOMAIN-SUFFIX,wikipedia.org,Hanker VPN
+- DOMAIN-SUFFIX,windows.com,Hanker VPN
+- DOMAIN-SUFFIX,windows.net,Hanker VPN
+- DOMAIN-SUFFIX,wire.com,Hanker VPN
+- DOMAIN-SUFFIX,wordpress.com,Hanker VPN
+- DOMAIN-SUFFIX,workflowy.com,Hanker VPN
+- DOMAIN-SUFFIX,wp.com,Hanker VPN
+- DOMAIN-SUFFIX,wsj.com,Hanker VPN
+- DOMAIN-SUFFIX,wsj.net,Hanker VPN
+- DOMAIN-SUFFIX,xda-developers.com,Hanker VPN
+- DOMAIN-SUFFIX,xeeno.com,Hanker VPN
+- DOMAIN-SUFFIX,xiti.com,Hanker VPN
+- DOMAIN-SUFFIX,yahoo.com,Hanker VPN
+- DOMAIN-SUFFIX,yimg.com,Hanker VPN
+- DOMAIN-SUFFIX,ying.com,Hanker VPN
+- DOMAIN-SUFFIX,yoyo.org,Hanker VPN
+- DOMAIN-SUFFIX,ytimg.com,Hanker VPN
+- DOMAIN-SUFFIX,telegra.ph,Hanker VPN
+- DOMAIN-SUFFIX,telegram.org,Hanker VPN
+- IP-CIDR,91.108.4.0/22,Hanker VPN,no-resolve
+- IP-CIDR,91.108.8.0/21,Hanker VPN,no-resolve
+- IP-CIDR,91.108.16.0/22,Hanker VPN,no-resolve
+- IP-CIDR,91.108.56.0/22,Hanker VPN,no-resolve
+- IP-CIDR,149.154.160.0/20,Hanker VPN,no-resolve
+- IP-CIDR6,2001:67c:4e8::/48,Hanker VPN,no-resolve
+- IP-CIDR6,2001:b28:f23d::/48,Hanker VPN,no-resolve
+- IP-CIDR6,2001:b28:f23f::/48,Hanker VPN,no-resolve
+- IP-CIDR,120.232.181.162/32,Hanker VPN,no-resolve
+- IP-CIDR,120.241.147.226/32,Hanker VPN,no-resolve
+- IP-CIDR,120.253.253.226/32,Hanker VPN,no-resolve
+- IP-CIDR,120.253.255.162/32,Hanker VPN,no-resolve
+- IP-CIDR,120.253.255.34/32,Hanker VPN,no-resolve
+- IP-CIDR,120.253.255.98/32,Hanker VPN,no-resolve
+- IP-CIDR,180.163.150.162/32,Hanker VPN,no-resolve
+- IP-CIDR,180.163.150.34/32,Hanker VPN,no-resolve
+- IP-CIDR,180.163.151.162/32,Hanker VPN,no-resolve
+- IP-CIDR,180.163.151.34/32,Hanker VPN,no-resolve
+- IP-CIDR,203.208.39.0/24,Hanker VPN,no-resolve
+- IP-CIDR,203.208.40.0/24,Hanker VPN,no-resolve
+- IP-CIDR,203.208.41.0/24,Hanker VPN,no-resolve
+- IP-CIDR,203.208.43.0/24,Hanker VPN,no-resolve
+- IP-CIDR,203.208.50.0/24,Hanker VPN,no-resolve
+- IP-CIDR,220.181.174.162/32,Hanker VPN,no-resolve
+- IP-CIDR,220.181.174.226/32,Hanker VPN,no-resolve
+- IP-CIDR,220.181.174.34/32,Hanker VPN,no-resolve
+- DOMAIN,injections.adguard.org,DIRECT
+- DOMAIN,local.adguard.org,DIRECT
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- IP-CIDR,17.0.0.0/8,DIRECT
+- IP-CIDR,100.64.0.0/10,DIRECT
+- IP-CIDR,224.0.0.0/4,DIRECT
+- IP-CIDR6,fe80::/10,DIRECT
+- DOMAIN-SUFFIX,cn,DIRECT
+- DOMAIN-KEYWORD,-cn,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,Hanker VPN
